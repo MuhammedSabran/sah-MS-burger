@@ -30,9 +30,9 @@ $(window).on('load', function () {
 });
 
 // nice select
-$(document).ready(function() {
+$(document).ready(function () {
     $('select').niceSelect();
-  });
+});
 
 /** google_map js **/
 function myMap() {
@@ -67,4 +67,16 @@ $(".client_owl-carousel").owlCarousel({
             items: 2
         }
     }
+});
+
+// Carousel event listener (background video update logic removed to keep video static)
+$('#customCarousel1').on('slide.bs.carousel', function (e) {
+    // Background video remains static
+});
+
+// Initialize hero carousel explicitely to ensure auto-sliding
+$('#customCarousel1').carousel({
+    interval: 2000,
+    cycle: true,
+    pause: "hover"
 });
