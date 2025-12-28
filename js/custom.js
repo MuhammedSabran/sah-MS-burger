@@ -86,3 +86,10 @@ $('#customCarousel1').carousel({
     cycle: true,
     pause: "hover"
 });
+
+// Welcome Overlay logic
+$(window).on('load', function () {
+    setTimeout(function () {
+        $('#welcome-overlay').addClass('fade-out');
+    }, 1200);
+});

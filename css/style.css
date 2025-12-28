@@ -122,11 +122,8 @@ a:focus {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-pointer-events: none;
-/* Prevent user interaction */
-object-fit: cover;
+  pointer-events: none;
+  /* Prevent user interaction */
 }
 
 /* New overlay to make text readable */
@@ -692,6 +689,7 @@ object-fit: cover;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .about_section .img-box img {
@@ -699,6 +697,13 @@ object-fit: cover;
   max-width: 445px;
   position: relative;
   z-index: 2;
+  transform-style: preserve-3d;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+  transition: filter 0.3s;
+}
+
+.about_section .img-box:hover img {
+  filter: drop-shadow(0 30px 70px rgba(255, 190, 51, 0.3));
 }
 
 .about_section .detail-box p {
@@ -1065,3 +1070,76 @@ object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
+/* Welcome Greeting Section */
+#welcome-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #222831;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+
+#welcome-overlay.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.welcome-content {
+  text-align: center;
+}
+
+.welcome-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5rem;
+  color: #ffbe33;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: welcomeEntrance 1.2s forwards 0.3s;
+  text-shadow: 0 0 20px rgba(255, 190, 51, 0.4);
+}
+
+.welcome-loader {
+  width: 100px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.welcome-loader::after {
+  content: '';
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #ffbe33;
+  animation: loaderMove 2s ease-in-out infinite;
+}
+
+@keyframes welcomeEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loaderMove {
+  0% { left: -100%; }
+  50% { left: 0%; }
+  100% { left: 100%; }
+}
+
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 3rem;
+  }
+}
