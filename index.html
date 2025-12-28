@@ -13,7 +13,7 @@
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="">
 
-  <title> Feane </title>
+  <title>MS BURGER</title>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -39,10 +39,10 @@
 
   <div class="hero_area">
     <div class="bg-box">
-      <img src="images/hero-bg.jpg" alt="">
+      <img src="images/hero-bg.png" alt="">
     </div>
     <!-- header section strats -->
-    <header class="header_section">
+    <header class="header_section fixed-top">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
@@ -149,7 +149,7 @@
     <section class="slider_section ">
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" data-video="ZXVJxrfMvuA">
             <div class="container ">
               <div class="row">
                 <div class="col-md-7 col-lg-6 ">
@@ -157,9 +157,12 @@
                     <h1>
                       Just One <br> More Bite
                     </h1>
-
+                    <p>"The ultimate internal struggle: You’re down to the last corner of that toasted brioche bun, your
+                      hands are a mess, and your stomach says 'stop,' but your heart says 'just one more bite.' 🍔✨ We
+                      don’t make snacks; we make burgers you can't walk away from. Come see which one wins the battle
+                      today."</p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="#menu" class="btn1">
                         Order Now
                       </a>
                     </div>
@@ -168,7 +171,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item ">
+          <div class="carousel-item " data-video="ZXVJxrfMvuA">
             <div class="container ">
               <div class="row">
                 <div class="col-md-7 col-lg-6 ">
@@ -178,7 +181,7 @@
                     </h1>
 
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="#menu" class="btn1">
                         Order Now
                       </a>
                     </div>
@@ -187,7 +190,7 @@
               </div>
             </div>
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item" data-video="ZXVJxrfMvuA">
             <div class="container ">
               <div class="row">
                 <div class="col-md-7 col-lg-6 ">
@@ -197,7 +200,7 @@
                     </h1>
 
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="#menu" class="btn1">
                         Order Now
                       </a>
                     </div>
@@ -229,7 +232,7 @@
           <div class="col-md-6  ">
             <div class="box ">
               <div class="img-box">
-                <img src="images/o1.jpg" alt="">
+                <img src="images/o1.jpg" alt="Tasty Thursdays Offer">
               </div>
               <div class="detail-box">
                 <h5>
@@ -300,7 +303,7 @@
           <div class="col-md-6  ">
             <div class="box ">
               <div class="img-box">
-                <img src="images/o2.jpg" alt="">
+                <img src="images/o2.jpg" alt="Pizza Days Offer">
               </div>
               <div class="detail-box">
                 <h5>
@@ -377,7 +380,7 @@
 
   <!-- food section -->
 
-  <section class="food_section layout_padding-bottom">
+  <section class="food_section layout_padding-bottom" id="menu">
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -399,7 +402,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="images/f1.png" alt="">
+                  <img src="images/f1.png" alt="Delicious Pizza">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -478,7 +481,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="images/f2.png" alt="">
+                  <img src="images/f2.png" alt="Delicious Burger">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -557,7 +560,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="images/f3.png" alt="">
+                  <img src="images/f3.png" alt="Delicious Pizza">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -636,7 +639,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="images/f4.png" alt="">
+                  <img src="images/f4.png" alt="Delicious Pasta">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -715,7 +718,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="images/f5.png" alt="">
+                  <img src="images/f5.png" alt="French Fries">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -794,7 +797,7 @@
             <div class="box">
               <div>
                 <div class="img-box">
-                  <img src="images/f6.png" alt="">
+                  <img src="images/f6.png" alt="Delicious Pizza">
                 </div>
                 <div class="detail-box">
                   <h5>
@@ -1164,40 +1167,45 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form_container">
-            <form action="">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="394b5ab4-c2ba-492f-84dc-8efe678048af">
               <div>
-                <input type="text" class="form-control" placeholder="Your Name" />
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required />
               </div>
               <div>
-                <input type="text" class="form-control" placeholder="Phone Number" />
+                <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Your Email" />
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required />
               </div>
               <div>
-                <select class="form-control nice-select wide">
+                <select name="persons" class="form-control nice-select wide">
                   <option value="" disabled selected>
                     How many persons?
                   </option>
-                  <option value="">
+                  <option value="2">
                     2
                   </option>
-                  <option value="">
+                  <option value="3">
                     3
                   </option>
-                  <option value="">
+                  <option value="4">
                     4
                   </option>
-                  <option value="">
+                  <option value="5">
                     5
                   </option>
                 </select>
               </div>
               <div>
-                <input type="date" class="form-control">
+                <input type="date" name="date" class="form-control">
+              </div>
+              <div>
+                <textarea name="message" class="form-control" placeholder="Message" required
+                  style="height: 100px; margin-bottom: 25px; padding-left: 25px; border: 1px solid #999; border-radius: 5px;"></textarea>
               </div>
               <div class="btn_box">
-                <button>
+                <button type="submit">
                   Book Now
                 </button>
               </div>
@@ -1326,7 +1334,7 @@
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
               <a href="">
-                <i class="fa fa-pinterest" aria-hidden="true"></i>
+                <i class="fa fa-pinterest" aria-hidden="tt inirue"></i>
               </a>
             </div>
           </div>
@@ -1345,10 +1353,10 @@
       </div>
       <div class="footer-info">
         <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br><br>
+          &copy; <span id="displayYear"></span> All Rights Reserved By MS Burger
+          <br><br>
           &copy; <span id="displayYear"></span> Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+          <a href="https://themewagon.com/" target="_blank">Shahry Ahamed</a>
         </p>
       </div>
     </div>

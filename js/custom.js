@@ -30,17 +30,23 @@ $(window).on('load', function () {
 });
 
 // nice select
-$(document).ready(function() {
+$(document).ready(function () {
     $('select').niceSelect();
-  });
+});
 
 /** google_map js **/
 function myMap() {
+    var myLatLng = { lat: 8.502556, lng: 81.179389 };
     var mapProp = {
-        center: new google.maps.LatLng(40.712775, -74.005973),
-        zoom: 18,
+        center: myLatLng,
+        zoom: 15,
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'MS BURGER'
+    });
 }
 
 // client section owl carousel
@@ -67,4 +73,16 @@ $(".client_owl-carousel").owlCarousel({
             items: 2
         }
     }
+});
+
+// Carousel event listener (background video update logic removed to keep video static)
+$('#customCarousel1').on('slide.bs.carousel', function (e) {
+    // Background video remains static
+});
+
+// Initialize hero carousel explicitely to ensure auto-sliding
+$('#customCarousel1').carousel({
+    interval: 2000,
+    cycle: true,
+    pause: "hover"
 });
